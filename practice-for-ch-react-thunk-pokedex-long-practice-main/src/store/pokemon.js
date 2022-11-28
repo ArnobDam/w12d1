@@ -38,7 +38,7 @@ export const getSinglePokemon = (id) => async dispatch => {
 }
 
 export const createPokemon = (pokemon) => async dispatch => {
-  const response = await fetch(`api/pokemon`, {
+  const response = await fetch(`/api/pokemon`, {
     method: "POST",
     body: JSON.stringify(pokemon),
     headers: {
@@ -56,7 +56,7 @@ export const createPokemon = (pokemon) => async dispatch => {
 }
 
 export const editPokemon = (pokemon) => async dispatch => {
-  const response = await fetch(`api/pokemon/${pokemon.id}`, {
+  const response = await fetch(`/api/pokemon/${pokemon.id}`, {
     method: 'PUT',
     body: JSON.stringify(pokemon),
     headers: {
