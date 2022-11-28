@@ -8,6 +8,7 @@ import { getSinglePokemon } from '../store/pokemon'
 
 const PokemonDetail = () => {
   const { pokemonId } = useParams();
+  
   const pokemon = useSelector(state => state.pokemon[pokemonId]);
   const [showEditPokeForm, setShowEditPokeForm] = useState(false);
   const [editItemId, setEditItemId] = useState(null);
